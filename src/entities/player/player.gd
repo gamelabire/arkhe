@@ -26,18 +26,21 @@ func _move(delta: float) -> void:
 	var _direction: Vector2 = Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
-	)
+	).normalized()
+	
+	var _mouse_position = get_global_mouse_position()
+	var _mouse_direction = (_mouse_position - global_position).normalized()
+	_animation_tree["parameters/idle/blend_position"] = _mouse_direction
 	
 	if _direction != Vector2.ZERO:
-		_animation_tree["parameters/idle/blend_position"] = _direction
 		_animation_tree["parameters/walk/blend_position"] = _direction
 		
-		velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration * delta)
-		velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration * delta)
+		velocity.x = lerp(velocity.x, _direction.x * _move_speed, _acceleration * delta)
+		velocity.y = lerp(velocity.y, _direction.y * _move_speed, _acceleration * delta)
 		return
 	
-	velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _friction * delta)
-	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _friction * delta)
+	velocity.x = lerp(velocity.x, _direction.x * _move_speed, _friction * delta)
+	velocity.y = lerp(velocity.y, _direction.y * _move_speed, _friction * delta)
 	
 	
 func _animate() -> void:
