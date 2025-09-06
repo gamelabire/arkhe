@@ -28,25 +28,25 @@ func _physics_process(delta: float) -> void:
 
 
 func _move(delta: float) -> void:
-	var _direction: Vector2 = Vector2(
+	var direction_player := Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
 	).normalized()
 	
-	var _mouse_position = get_global_mouse_position()
-	var _mouse_direction = (_mouse_position - global_position).normalized()
-	_animation_tree["parameters/idle/blend_position"] = _mouse_direction
-	_animation_tree["parameters/attack/blend_position"] = _mouse_direction
-	   
-	if _direction != Vector2.ZERO:
-		_animation_tree["parameters/walk/blend_position"] = _direction
-		
-		velocity.x = lerp(velocity.x, _direction.x * _move_speed, _acceleration * delta)
-		velocity.y = lerp(velocity.y, _direction.y * _move_speed, _acceleration * delta)
-		return
+	var mouse_direction := (get_global_mouse_position() - global_position).normalized()
 	
-	velocity.x = lerp(velocity.x, _direction.x * _move_speed, _friction * delta)
-	velocity.y = lerp(velocity.y, _direction.y * _move_speed, _friction * delta)
+	# Update blend positions
+	for state in ["idle", "attack"]:
+		_animation_tree["parameters/%s/blend_position" % state] = mouse_direction
+	   
+	if direction_player != Vector2.ZERO:
+		_animation_tree["parameters/walk/blend_position"] = direction_player
+		
+		velocity.x = lerp(velocity.x, direction_player.x * _move_speed, _acceleration * delta)
+		velocity.y = lerp(velocity.y, direction_player.y * _move_speed, _acceleration * delta)
+	else:
+		velocity.x = lerp(velocity.x, direction_player.x * _move_speed, _friction * delta)
+		velocity.y = lerp(velocity.y, direction_player.y * _move_speed, _friction * delta)
 	
 	
 func _attack():
