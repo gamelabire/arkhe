@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c4v5xp3pumt1r"
-path="res://.godot/imported/xilosa_.ttf-90bdaf422f8c1d721c5c5cb3476b4fdb.fontdata"
+path="res://.godot/imported/xilosa_.ttf-55a328c49b6511c3783a612b6b39b40a.fontdata"
 
 [deps]
 
-source_file="res://src/assets/fontes/xilosa/xilosa_.ttf"
-dest_files=["res://.godot/imported/xilosa_.ttf-90bdaf422f8c1d721c5c5cb3476b4fdb.fontdata"]
+source_file="res://src/assets/fonts/xilosa/xilosa_.ttf"
+dest_files=["res://.godot/imported/xilosa_.ttf-55a328c49b6511c3783a612b6b39b40a.fontdata"]
 
 [params]
 

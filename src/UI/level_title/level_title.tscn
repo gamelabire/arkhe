@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dnsq1qssrtl5"]
 
-[ext_resource type="Script" uid="uid://dr5ymhnurprcw" path="res://control.gd" id="1_62e2m"]
-[ext_resource type="FontFile" uid="uid://c4v5xp3pumt1r" path="res://src/assets/fontes/xilosa/xilosa_.ttf" id="2_qtu10"]
+[ext_resource type="Script" uid="uid://dr5ymhnurprcw" path="res://src/UI/level_title/level_title.gd" id="1_62e2m"]
+[ext_resource type="FontFile" uid="uid://c4v5xp3pumt1r" path="res://src/assets/fonts/xilosa/xilosa_.ttf" id="2_qtu10"]
 
 [sub_resource type="Animation" id="Animation_kbped"]
 resource_name = "Fade"
@@ -37,7 +37,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label/Chapeu:self_modulate")
+tracks/2/path = NodePath("Label/hat:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -49,19 +49,19 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Label/Chapeu:position")
+tracks/3/path = NodePath("Label/hat:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.8, 3.53333),
+"times": PackedFloat32Array(0, 0.633333, 0.766667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(146, -3), Vector2(146, 2), Vector2(146, 2)]
+"values": [Vector2(146, -6), Vector2(146, -6), Vector2(146, -4)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label/Peixe1:self_modulate")
+tracks/4/path = NodePath("Label/fish1:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -73,7 +73,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label/Peixe2:self_modulate")
+tracks/5/path = NodePath("Label/fish2:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -85,7 +85,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label/Label:self_modulate")
+tracks/6/path = NodePath("Label/SubTitle:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -151,7 +151,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label/Chapeu:self_modulate")
+tracks/2/path = NodePath("Label/hat:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -163,7 +163,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Label/Chapeu:position")
+tracks/3/path = NodePath("Label/hat:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -175,7 +175,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label/Peixe1:self_modulate")
+tracks/4/path = NodePath("Label/fish1:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -187,7 +187,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label/Peixe2:self_modulate")
+tracks/5/path = NodePath("Label/fish2:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -199,7 +199,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label/Label:self_modulate")
+tracks/6/path = NodePath("Label/SubTitle:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -236,7 +236,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_62e2m")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_ee4bf")
 }
@@ -244,16 +244,15 @@ libraries = {
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-offset_left = -3.0
 offset_top = 9.0
-offset_right = 317.0
+offset_right = 320.0
 offset_bottom = 68.0
 text = "Arkhe"
 label_settings = SubResource("LabelSettings_ee4bf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Chapeu" type="Label" parent="Label"]
+[node name="hat" type="Label" parent="Label"]
 layout_mode = 0
 offset_left = 146.0
 offset_top = 2.0
@@ -262,7 +261,7 @@ offset_bottom = 25.0
 text = "&"
 label_settings = SubResource("LabelSettings_62e2m")
 
-[node name="Peixe1" type="Label" parent="Label"]
+[node name="fish1" type="Label" parent="Label"]
 layout_mode = 0
 offset_left = 92.0
 offset_top = 16.0
@@ -272,7 +271,7 @@ rotation = 0.253073
 text = "<"
 label_settings = SubResource("LabelSettings_62e2m")
 
-[node name="Peixe2" type="Label" parent="Label"]
+[node name="fish2" type="Label" parent="Label"]
 layout_mode = 0
 offset_left = 229.0
 offset_top = 33.0
@@ -282,11 +281,12 @@ rotation = 3.33532
 text = ">"
 label_settings = SubResource("LabelSettings_62e2m")
 
-[node name="Label" type="Label" parent="Label"]
+[node name="SubTitle" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = 30.0
+offset_left = 3.0
 offset_top = 42.0
-offset_right = 305.0
+offset_right = 323.0
 offset_bottom = 65.0
 text = "Explore o sertão em busca do poço secreto"
 label_settings = SubResource("LabelSettings_qtu10")
+horizontal_alignment = 1
