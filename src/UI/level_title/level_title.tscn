@@ -1,11 +1,22 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnsq1qssrtl5"]
+[gd_scene load_steps=9 format=3 uid="uid://bq8hu3kfq8mq"]
 
-[ext_resource type="Script" uid="uid://dr5ymhnurprcw" path="res://src/UI/level_title/level_title.gd" id="1_62e2m"]
 [ext_resource type="FontFile" uid="uid://c4v5xp3pumt1r" path="res://src/assets/fonts/xilosa/xilosa_.ttf" id="2_qtu10"]
 
-[sub_resource type="Animation" id="Animation_kbped"]
-resource_name = "Fade"
-length = 3.6
+[sub_resource type="GDScript" id="GDScript_6fhwl"]
+script/source = "extends CanvasLayer
+
+@onready var label: Label = $Control/Label
+@onready var animation: AnimationPlayer = $Control/Animation
+
+func show_title(subtitle: String, main_title = \"Arkhe\"):
+	label.text = main_title
+	label.get_node(\"SubTitle\").text = subtitle
+	animation.play(\"Fadein\")
+
+# func _process(_delta: float) -> void:
+# 	if Input.is_action_just_pressed(\"ui_text_submit\"):
+# 		show_title(\"Explore o sertão em busca do poço secreto\")
+"
 
 [sub_resource type="Animation" id="Animation_62e2m"]
 resource_name = "Fadein"
@@ -13,7 +24,7 @@ length = 3.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Label:self_modulate")
+tracks/0/path = NodePath("Control/Label:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -25,7 +36,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label:modulate")
+tracks/1/path = NodePath("Control/Label:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -37,7 +48,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label/hat:self_modulate")
+tracks/2/path = NodePath("Control/Label/hat:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -49,7 +60,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Label/hat:position")
+tracks/3/path = NodePath("Control/Label/hat:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -61,7 +72,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label/fish1:self_modulate")
+tracks/4/path = NodePath("Control/Label/fish1:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -73,7 +84,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label/fish2:self_modulate")
+tracks/5/path = NodePath("Control/Label/fish2:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -85,7 +96,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label/SubTitle:self_modulate")
+tracks/6/path = NodePath("Control/Label/SubTitle:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -95,39 +106,12 @@ tracks/6/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ee4bf"]
-resource_name = "Fadeout"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.966667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.966667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_qtu10"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Label:self_modulate")
+tracks/0/path = NodePath("Control/Label:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -139,7 +123,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label:modulate")
+tracks/1/path = NodePath("Control/Label:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -151,7 +135,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label/hat:self_modulate")
+tracks/2/path = NodePath("Control/Label/hat:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -163,7 +147,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Label/hat:position")
+tracks/3/path = NodePath("Control/Label/hat:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -175,7 +159,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label/fish1:self_modulate")
+tracks/4/path = NodePath("Control/Label/fish1:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -187,7 +171,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label/fish2:self_modulate")
+tracks/5/path = NodePath("Control/Label/fish2:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -199,7 +183,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label/SubTitle:self_modulate")
+tracks/6/path = NodePath("Control/Label/SubTitle:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -211,9 +195,7 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ee4bf"]
 _data = {
-&"Fade": SubResource("Animation_kbped"),
 &"Fadein": SubResource("Animation_62e2m"),
-&"Fadeout": SubResource("Animation_ee4bf"),
 &"RESET": SubResource("Animation_qtu10")
 }
 
@@ -227,23 +209,23 @@ font = ExtResource("2_qtu10")
 [sub_resource type="LabelSettings" id="LabelSettings_qtu10"]
 font = ExtResource("2_qtu10")
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_62e2m")
+[node name="level_title" type="CanvasLayer"]
+script = SubResource("GDScript_6fhwl")
 
-[node name="Animation" type="AnimationPlayer" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Animation" type="AnimationPlayer" parent="Control"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_ee4bf")
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Control"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 2
 offset_top = 9.0
 offset_right = 320.0
 offset_bottom = 68.0
@@ -252,16 +234,16 @@ label_settings = SubResource("LabelSettings_ee4bf")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="hat" type="Label" parent="Label"]
+[node name="hat" type="Label" parent="Control/Label"]
 layout_mode = 0
 offset_left = 146.0
-offset_top = 2.0
+offset_top = -6.0
 offset_right = 186.0
-offset_bottom = 25.0
+offset_bottom = 17.0
 text = "&"
 label_settings = SubResource("LabelSettings_62e2m")
 
-[node name="fish1" type="Label" parent="Label"]
+[node name="fish1" type="Label" parent="Control/Label"]
 layout_mode = 0
 offset_left = 92.0
 offset_top = 16.0
@@ -271,7 +253,7 @@ rotation = 0.253073
 text = "<"
 label_settings = SubResource("LabelSettings_62e2m")
 
-[node name="fish2" type="Label" parent="Label"]
+[node name="fish2" type="Label" parent="Control/Label"]
 layout_mode = 0
 offset_left = 229.0
 offset_top = 33.0
@@ -281,7 +263,7 @@ rotation = 3.33532
 text = ">"
 label_settings = SubResource("LabelSettings_62e2m")
 
-[node name="SubTitle" type="Label" parent="Label"]
+[node name="SubTitle" type="Label" parent="Control/Label"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 42.0
