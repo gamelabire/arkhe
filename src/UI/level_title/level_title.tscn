@@ -1,22 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bq8hu3kfq8mq"]
 
+[ext_resource type="Script" uid="uid://bdslfcmodmgyu" path="res://src/UI/level_title/level_title.gd" id="1_td5n7"]
 [ext_resource type="FontFile" uid="uid://c4v5xp3pumt1r" path="res://src/assets/fonts/xilosa/xilosa_.ttf" id="2_qtu10"]
-
-[sub_resource type="GDScript" id="GDScript_6fhwl"]
-script/source = "extends CanvasLayer
-
-@onready var label: Label = $Control/Label
-@onready var animation: AnimationPlayer = $Control/Animation
-
-func show_title(subtitle: String, main_title = \"Arkhe\"):
-	label.text = main_title
-	label.get_node(\"SubTitle\").text = subtitle
-	animation.play(\"Fadein\")
-
-# func _process(_delta: float) -> void:
-# 	if Input.is_action_just_pressed(\"ui_text_submit\"):
-# 		show_title(\"Explore o sertão em busca do poço secreto\")
-"
 
 [sub_resource type="Animation" id="Animation_62e2m"]
 resource_name = "Fadein"
@@ -210,7 +195,7 @@ font = ExtResource("2_qtu10")
 font = ExtResource("2_qtu10")
 
 [node name="level_title" type="CanvasLayer"]
-script = SubResource("GDScript_6fhwl")
+script = ExtResource("1_td5n7")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -226,6 +211,7 @@ libraries = {
 
 [node name="Label" type="Label" parent="Control"]
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_top = 9.0
 offset_right = 320.0
 offset_bottom = 68.0

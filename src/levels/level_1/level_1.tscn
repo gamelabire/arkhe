@@ -389,18 +389,22 @@ tile_set = SubResource("TileSet_recj7")
 
 [node name="first_crack" type="TileMapLayer" parent="map/Opening_Cutscene"]
 tile_map_data = PackedByteArray("AADs/wQAAAADAAAAAADr/wQAAAADAAAAAADr/wUAAAADAAMAAADs/wUAAAADAAIAAADq/wUAAAABAAMAAAA=")
+enabled = false
 tile_set = SubResource("TileSet_8n223")
 
 [node name="second_crack" type="TileMapLayer" parent="map/Opening_Cutscene"]
 tile_map_data = PackedByteArray("AADp/wUAAAABAAIAAADq/wYAAAADAAEAAADq/wcAAAACAAAAAADp/wYAAAADAAMAAADp/wcAAAACAAAAAADr/wYAAAAAAAIAAADq/wgAAAACAAIAAADt/wQAAAADAAMAAADt/wMAAAAAAAIAAADs/wMAAAABAAIAAADs/wIAAAADAAEAAAA=")
+enabled = false
 tile_set = SubResource("TileSet_hfo7v")
 
 [node name="third_crack" type="TileMapLayer" parent="map/Opening_Cutscene"]
 tile_map_data = PackedByteArray("AADr/wcAAAADAAMAAADr/wgAAAADAAAAAADr/wkAAAAAAAAAAADq/wkAAAABAAEAAADp/wkAAAABAAMAAADp/woAAAABAAIAAADo/woAAAADAAIAAADq/wQAAAADAAMAAADq/wMAAAACAAMAAADt/wUAAAADAAMAAADu/wUAAAADAAMAAADt/wIAAAAAAAAAAADu/wIAAAADAAMAAADv/wIAAAACAAEAAADs/wYAAAAAAAAAAAA=")
+enabled = false
 tile_set = SubResource("TileSet_tb8v1")
 
 [node name="CutScenePlayer" parent="map/Opening_Cutscene" instance=ExtResource("2_jegla")]
-position = Vector2(-281, 144.297)
+position = Vector2(-334, 113)
+scale = Vector2(1e-05, 1e-05)
 
 [node name="Level_Title" parent="map/Opening_Cutscene" instance=ExtResource("6_3erhm")]
 
