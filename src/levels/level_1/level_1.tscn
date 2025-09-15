@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dtbghl4ke0h6s"]
+[gd_scene load_steps=25 format=4 uid="uid://dtbghl4ke0h6s"]
 
 [ext_resource type="Script" uid="uid://cfbdb7rmjkucq" path="res://src/levels/level_1/level_1.gd" id="1_3erhm"]
 [ext_resource type="Texture2D" uid="uid://opntl1lsv15u" path="res://src/assets/sprites/background/desert_demo_terrain.png" id="1_khpat"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://q5ni8yega7qk" path="res://src/assets/sprites/background/desert_demo_objects.png" id="2_recj7"]
 [ext_resource type="Texture2D" uid="uid://ul7bgb85cgrf" path="res://src/assets/sprites/background/pixel_art.png" id="3_v5xl6"]
 [ext_resource type="PackedScene" uid="uid://bq8hu3kfq8mq" path="res://src/UI/level_title/level_title.tscn" id="6_3erhm"]
+[ext_resource type="PackedScene" uid="uid://b7hnrqsw2mcp6" path="res://src/levels/level_1/enemies/Scorpion/scorpion.tscn" id="7_0pi1d"]
 
 [sub_resource type="Animation" id="Animation_r3lon"]
 length = 6.0
@@ -192,6 +193,7 @@ texture = ExtResource("1_khpat")
 
 [sub_resource type="TileSet" id="TileSet_v5xl6"]
 physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_recj7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jegla"]
@@ -336,6 +338,7 @@ texture = ExtResource("2_recj7")
 
 [sub_resource type="TileSet" id="TileSet_3erhm"]
 physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
 sources/2 = SubResource("TileSetAtlasSource_v5xl6")
 
 [node name="Level_1" type="Node2D"]
@@ -350,6 +353,7 @@ libraries = {
 
 [node name="MapLimit" type="StaticBody2D" parent="Collisions"]
 collision_layer = 2
+collision_mask = 5
 
 [node name="down" type="CollisionShape2D" parent="Collisions/MapLimit"]
 position = Vector2(38, 371)
@@ -369,6 +373,7 @@ shape = SubResource("RectangleShape2D_recj7")
 
 [node name="HoleCollision" type="StaticBody2D" parent="Collisions"]
 collision_layer = 2
+collision_mask = 5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/HoleCollision"]
 polygon = PackedVector2Array(-352, 144, -352, 128, -368, 128, -368, 80, -352, 80, -352, 48, -336, 48, -336, 64, -320, 64, -320, 32, -256, 32, -256, 48, -288, 48, -288, 80, -272, 80, -272, 96, -304, 96, -304, 112, -320, 112, -320, 160, -352, 160, -352, 176, -384, 176, -384, 160, -368, 160, -368, 144)
@@ -389,22 +394,18 @@ tile_set = SubResource("TileSet_recj7")
 
 [node name="first_crack" type="TileMapLayer" parent="map/Opening_Cutscene"]
 tile_map_data = PackedByteArray("AADs/wQAAAADAAAAAADr/wQAAAADAAAAAADr/wUAAAADAAMAAADs/wUAAAADAAIAAADq/wUAAAABAAMAAAA=")
-enabled = false
 tile_set = SubResource("TileSet_8n223")
 
 [node name="second_crack" type="TileMapLayer" parent="map/Opening_Cutscene"]
 tile_map_data = PackedByteArray("AADp/wUAAAABAAIAAADq/wYAAAADAAEAAADq/wcAAAACAAAAAADp/wYAAAADAAMAAADp/wcAAAACAAAAAADr/wYAAAAAAAIAAADq/wgAAAACAAIAAADt/wQAAAADAAMAAADt/wMAAAAAAAIAAADs/wMAAAABAAIAAADs/wIAAAADAAEAAAA=")
-enabled = false
 tile_set = SubResource("TileSet_hfo7v")
 
 [node name="third_crack" type="TileMapLayer" parent="map/Opening_Cutscene"]
 tile_map_data = PackedByteArray("AADr/wcAAAADAAMAAADr/wgAAAADAAAAAADr/wkAAAAAAAAAAADq/wkAAAABAAEAAADp/wkAAAABAAMAAADp/woAAAABAAIAAADo/woAAAADAAIAAADq/wQAAAADAAMAAADq/wMAAAACAAMAAADt/wUAAAADAAMAAADu/wUAAAADAAMAAADt/wIAAAAAAAAAAADu/wIAAAADAAMAAADv/wIAAAACAAEAAADs/wYAAAAAAAAAAAA=")
-enabled = false
 tile_set = SubResource("TileSet_tb8v1")
 
 [node name="CutScenePlayer" parent="map/Opening_Cutscene" instance=ExtResource("2_jegla")]
-position = Vector2(-334, 113)
-scale = Vector2(1e-05, 1e-05)
+position = Vector2(-281, 147)
 
 [node name="Level_Title" parent="map/Opening_Cutscene" instance=ExtResource("6_3erhm")]
 
@@ -424,3 +425,6 @@ limit_camera_top = -112
 limit_camera_bottom = 368
 limit_camera_right = 576
 limit_camera_left = -512
+
+[node name="Scorpion" parent="map/Ysort" instance=ExtResource("7_0pi1d")]
+position = Vector2(-115, 139)
