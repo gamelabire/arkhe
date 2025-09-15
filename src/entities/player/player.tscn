@@ -843,6 +843,9 @@ parameters/walk/blend_position = Vector2(0, 0)
 wait_time = 0.6
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
 
 [node name="AttackArea" type="Area2D" parent="."]
 collision_mask = 4
