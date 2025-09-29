@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e61uiehn85p0"
-path="res://.godot/imported/player_1.png-e5d1503170fdcfd35fbebf809337b601.ctex"
+uid="uid://bydx7fcyppn17"
+path="res://.godot/imported/walkup.png-eb0b9ddc672f41eacb106dabae016f96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/player/player_1.png"
-dest_files=["res://.godot/imported/player_1.png-e5d1503170fdcfd35fbebf809337b601.ctex"]
+source_file="res://src/assets/sprites/player/walkup.png"
+dest_files=["res://.godot/imported/walkup.png-eb0b9ddc672f41eacb106dabae016f96.ctex"]
 
 [params]
 
