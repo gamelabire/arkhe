@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e61uiehn85p0"
-path="res://.godot/imported/Walkidleside.png-8ba95428519550256482c3e5123d7900.ctex"
+path="res://.godot/imported/Walk_idle_side.png-bed1f6555a0a8ddd3145a33898ccf1e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/player/Walkidleside.png"
-dest_files=["res://.godot/imported/Walkidleside.png-8ba95428519550256482c3e5123d7900.ctex"]
+source_file="res://src/assets/sprites/player/Walk_idle_side.png"
+dest_files=["res://.godot/imported/Walk_idle_side.png-bed1f6555a0a8ddd3145a33898ccf1e5.ctex"]
 
 [params]
 
