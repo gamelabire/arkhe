@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=31 format=3 uid="uid://bydyks5n25kf0"]
 
 [ext_resource type="Script" uid="uid://xrjxo4m3wpar" path="res://src/entities/player/player.gd" id="1_vt6n5"]
@@ -7,6 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://bj8hawte1lxqq" path="res://src/assets/sprites/player/walk_up.png" id="5_4f0qm"]
 [ext_resource type="Texture2D" uid="uid://lxnohrgqsoxc" path="res://src/assets/sprites/player/Idle_up.png" id="6_tk761"]
 [ext_resource type="Texture2D" uid="uid://dk7i8agumd5d4" path="res://src/assets/sprites/player/walk_side.png" id="7_oih67"]
+=======
+[gd_scene load_steps=32 format=3 uid="uid://bydyks5n25kf0"]
+
+[ext_resource type="Script" uid="uid://xrjxo4m3wpar" path="res://src/entities/player/player.gd" id="1_vt6n5"]
+[ext_resource type="Texture2D" uid="uid://e61uiehn85p0" path="res://src/assets/sprites/player/Walk_idle_side.png" id="2_0mfjg"]
+[ext_resource type="Texture2D" uid="uid://ctny2g6w6jcoh" path="res://src/assets/sprites/player/idle_down.png" id="3_oih67"]
+[ext_resource type="Texture2D" uid="uid://c4g15cpoq1j6q" path="res://src/assets/sprites/player/walk_down.png" id="4_eb65w"]
+[ext_resource type="Texture2D" uid="uid://bydx7fcyppn17" path="res://src/assets/sprites/player/walk_up.png" id="5_4f0qm"]
+[ext_resource type="Texture2D" uid="uid://lxnohrgqsoxc" path="res://src/assets/sprites/player/Idle_up.png" id="6_tk761"]
+[ext_resource type="Texture2D" uid="uid://chsmpbp5w413a" path="res://src/assets/sprites/player/Death.png" id="7_oih67"]
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt6n5"]
 size = Vector2(12, 3)
@@ -399,6 +411,139 @@ tracks/4/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
+<<<<<<< HEAD
+=======
+[sub_resource type="Animation" id="Animation_0mfjg"]
+resource_name = "walk_left"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0mfjg")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sprite:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_muk8e"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_0mfjg")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sprite:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 [sub_resource type="Animation" id="Animation_3c4mh"]
 resource_name = "walk_up"
 length = 0.75
@@ -465,8 +610,13 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_eb65w"]
+<<<<<<< HEAD
 resource_name = "walk_right"
 length = 0.75
+=======
+resource_name = "death"
+length = 0.45
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -490,7 +640,11 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
+<<<<<<< HEAD
 "values": [8]
+=======
+"values": [11]
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -523,6 +677,7 @@ tracks/4/path = NodePath("sprite:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+<<<<<<< HEAD
 "times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.233333, 0.333333, 0.433333, 0.533333, 0.633333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
@@ -592,11 +747,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
+=======
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ketdh"]
 _data = {
 &"RESET": SubResource("Animation_vt6n5"),
+&"death": SubResource("Animation_eb65w"),
 &"idle_down": SubResource("Animation_n7e5a"),
 &"idle_left": SubResource("Animation_wrxq6"),
 &"idle_right": SubResource("Animation_ketdh"),

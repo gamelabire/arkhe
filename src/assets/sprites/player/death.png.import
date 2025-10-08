@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:src/assets/sprites/player/death.png.import
 uid="uid://cl41cy6eoahnu"
 path="res://.godot/imported/death.png-2ac4ad1079f41ce2eba4a5f60325e68e.ctex"
+========
+uid="uid://bydx7fcyppn17"
+path="res://.godot/imported/walk_up.png-fbd7c498735e22002b80063cf4c6d2d6.ctex"
+>>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824:src/assets/sprites/player/walk_up.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:src/assets/sprites/player/death.png.import
 source_file="res://src/assets/sprites/player/death.png"
 dest_files=["res://.godot/imported/death.png-2ac4ad1079f41ce2eba4a5f60325e68e.ctex"]
+========
+source_file="res://src/assets/sprites/player/walk_up.png"
+dest_files=["res://.godot/imported/walk_up.png-fbd7c498735e22002b80063cf4c6d2d6.ctex"]
+>>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824:src/assets/sprites/player/walk_up.png.import
 
 [params]
 

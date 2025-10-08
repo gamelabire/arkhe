@@ -2,16 +2,36 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://mnwpbdrawfb0"
 path="res://.godot/imported/walk_down.png-122121b19db71a7d59ad71a775b98afa.ctex"
+=======
+<<<<<<<< HEAD:src/assets/sprites/player/walk_up.png.import
+uid="uid://bj8hawte1lxqq"
+path="res://.godot/imported/walk_up.png-fbd7c498735e22002b80063cf4c6d2d6.ctex"
+========
+uid="uid://c4g15cpoq1j6q"
+path="res://.godot/imported/walk_down.png-122121b19db71a7d59ad71a775b98afa.ctex"
+>>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824:src/assets/sprites/player/walk_down.png.import
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://src/assets/sprites/player/walk_down.png"
 dest_files=["res://.godot/imported/walk_down.png-122121b19db71a7d59ad71a775b98afa.ctex"]
+=======
+<<<<<<<< HEAD:src/assets/sprites/player/walk_up.png.import
+source_file="res://src/assets/sprites/player/walk_up.png"
+dest_files=["res://.godot/imported/walk_up.png-fbd7c498735e22002b80063cf4c6d2d6.ctex"]
+========
+source_file="res://src/assets/sprites/player/walk_down.png"
+dest_files=["res://.godot/imported/walk_down.png-122121b19db71a7d59ad71a775b98afa.ctex"]
+>>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824:src/assets/sprites/player/walk_down.png.import
+>>>>>>> 5a18a94783618a61c127f1d8aaa0a97016ab8824
 
 [params]
 
