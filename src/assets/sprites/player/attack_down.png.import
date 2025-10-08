@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e61uiehn85p0"
-path="res://.godot/imported/Walkidleside.png-8ba95428519550256482c3e5123d7900.ctex"
+uid="uid://big7l3lahddht"
+path="res://.godot/imported/attack_down.png-583a2895c93d221626ff12aba8e72300.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/player/Walkidleside.png"
-dest_files=["res://.godot/imported/Walkidleside.png-8ba95428519550256482c3e5123d7900.ctex"]
+source_file="res://src/assets/sprites/player/attack_down.png"
+dest_files=["res://.godot/imported/attack_down.png-583a2895c93d221626ff12aba8e72300.ctex"]
 
 [params]
 

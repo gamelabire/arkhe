@@ -16,12 +16,20 @@ func _ready() -> void:
 	animation.play("opening_cutscene")
 	await animation.animation_finished
 	
-	main_player.global_position = cutscene_player.global_position
-	main_player.play_anim("idle", Vector2(0, 1))
-	
+	main_player.position = cutscene_player.position
 	main_player.camera.enabled = true
 	main_player.set_physics_process(true)
 	main_player.visible = true
 	
 	cutscene_player.queue_free()
 	level_title.queue_free()
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("skip"):
+		animation.stop()
+		main_player.play_anim("idle", Vector2(0, 1))
+		main_player.camera.enabled = true
+		main_player.set_physics_process(true)
+		main_player.visible = true
+		cutscene_player.queue_free()
+		level_title.queue_free()
