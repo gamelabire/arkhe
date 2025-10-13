@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://opntl1lsv15u"
-path="res://.godot/imported/desert_demo_terrain.png-34d624c90c5f475992b34b7ccadfb4f5.ctex"
+uid="uid://dmx8x1c1wiso8"
+path="res://.godot/imported/walk_up.png-8289139a91c5387788cbe83acf2f38fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/sprites/background/desert_demo_terrain.png"
-dest_files=["res://.godot/imported/desert_demo_terrain.png-34d624c90c5f475992b34b7ccadfb4f5.ctex"]
+source_file="res://src/assets/sprites/player/walk/walk_up.png"
+dest_files=["res://.godot/imported/walk_up.png-8289139a91c5387788cbe83acf2f38fc.ctex"]
 
 [params]
 
