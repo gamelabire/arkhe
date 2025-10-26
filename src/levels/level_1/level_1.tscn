@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnurdy17uwrde" path="res://src/assets/sprites/background/desert_demo_terrain2.png" id="2_3erhm"]
 [ext_resource type="PackedScene" uid="uid://dkf73vhtu1d3h" path="res://src/entities/player/player.tscn" id="2_jegla"]
 [ext_resource type="Texture2D" uid="uid://q5ni8yega7qk" path="res://src/assets/sprites/background/desert_demo_objects.png" id="2_recj7"]
-[ext_resource type="PackedScene" uid="uid://bq8hu3kfq8mq" path="res://src/UI/level_title/level_title.tscn" id="6_3erhm"]
+[ext_resource type="PackedScene" uid="uid://bq8hu3kfq8mq" path="res://src/UI/components/level_title/level_title.tscn" id="6_3erhm"]
 [ext_resource type="PackedScene" uid="uid://b7hnrqsw2mcp6" path="res://src/levels/level_1/enemies/Scorpion/scorpion.tscn" id="7_0pi1d"]
 
 [sub_resource type="Animation" id="Animation_r3lon"]
@@ -453,7 +453,6 @@ tile_set = SubResource("TileSet_3erhm")
 [node name="Player" parent="map/Ysort" instance=ExtResource("2_jegla")]
 visible = false
 position = Vector2(-286, 247)
-_friction = 4.5
 limit_camera_top = -112
 limit_camera_bottom = 368
 limit_camera_right = 576

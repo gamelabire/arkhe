@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bq8hu3kfq8mq"]
 
-[ext_resource type="Script" uid="uid://bdslfcmodmgyu" path="res://src/UI/level_title/level_title.gd" id="1_td5n7"]
+[ext_resource type="Script" uid="uid://bdslfcmodmgyu" path="res://src/UI/components/level_title/level_title.gd" id="1_td5n7"]
 [ext_resource type="FontFile" uid="uid://c4v5xp3pumt1r" path="res://src/assets/fonts/xilosa/xilosa_.ttf" id="2_qtu10"]
 
 [sub_resource type="Animation" id="Animation_62e2m"]

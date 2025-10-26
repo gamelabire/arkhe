@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckitekhe5qs1"]
+
+[ext_resource type="Script" uid="uid://dvdm28y36opk5" path="res://src/UI/interfaces/credits_menu/credits_menu.gd" id="1_0b35t"]
+[ext_resource type="Texture2D" uid="uid://cm0d3dgr4dydy" path="res://src/assets/images/art1.png" id="1_2fsj5"]
+[ext_resource type="FontFile" uid="uid://c4v5xp3pumt1r" path="res://src/assets/fonts/xilosa/xilosa_.ttf" id="2_qsha1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0b35t"]
+font = ExtResource("2_qsha1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_v5h52"]
+font = ExtResource("2_qsha1")
+
+[node name="credits_menu" type="Node2D"]
+script = ExtResource("1_0b35t")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_2fsj5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(7.99987, 4.50079)
+color = Color(0, 0, 0, 0.721569)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="credits" type="Label" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 111.0
+offset_top = 27.0
+offset_right = 227.0
+offset_bottom = 180.0
+scale = Vector2(0.854595, 0.857292)
+text = "Yudi Duarte
+Tarcísio Santos
+Ana
+Pedro
+Cássio Filho
+Luciano Junior"
+label_settings = SubResource("LabelSettings_0b35t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="goBack" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.929549, 1.20387)
+mouse_filter = 0
+text = "x"
+label_settings = SubResource("LabelSettings_v5h52")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="CanvasLayer/goBack" to="." method="_on_go_back_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/goBack" to="." method="_on_go_back_mouse_exited"]
