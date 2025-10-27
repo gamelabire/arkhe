@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chafxig1uei76"]
+[gd_scene load_steps=10 format=3 uid="uid://chafxig1uei76"]
 
 [ext_resource type="Texture2D" uid="uid://cm0d3dgr4dydy" path="res://src/assets/images/art1.png" id="1_81unb"]
 [ext_resource type="Script" uid="uid://dm7s5cs4ex1th" path="res://src/UI/interfaces/main_menu/main_menu.gd" id="1_jh20n"]
@@ -19,6 +19,9 @@ font = ExtResource("2_gy3uk")
 [sub_resource type="LabelSettings" id="LabelSettings_eterd"]
 font = ExtResource("2_gy3uk")
 
+[sub_resource type="LabelSettings" id="LabelSettings_un6q2"]
+font = ExtResource("2_gy3uk")
+
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_jh20n")
 
@@ -30,9 +33,9 @@ texture = ExtResource("1_81unb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Node" type="Node" parent="CanvasLayer"]
+[node name="Title" type="Node" parent="CanvasLayer"]
 
-[node name="title" type="Label" parent="CanvasLayer/Node"]
+[node name="title" type="Label" parent="CanvasLayer/Title"]
 offset_left = 133.0
 offset_top = -3.0
 offset_right = 176.0
@@ -43,7 +46,7 @@ label_settings = SubResource("LabelSettings_odv7t")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="img" type="Label" parent="CanvasLayer/Node"]
+[node name="img" type="Label" parent="CanvasLayer/Title"]
 texture_filter = 1
 offset_left = 114.0
 offset_top = 40.0
@@ -55,7 +58,7 @@ label_settings = SubResource("LabelSettings_bw7w8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="img2" type="Label" parent="CanvasLayer/Node"]
+[node name="img2" type="Label" parent="CanvasLayer/Title"]
 texture_filter = 1
 offset_left = 240.0
 offset_top = -1.0
@@ -105,6 +108,16 @@ layout_mode = 2
 text = "Sair"
 label_settings = SubResource("LabelSettings_eterd")
 horizontal_alignment = 1
+
+[node name="version" type="Label" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 302.0
+offset_top = 176.0
+offset_right = 383.0
+offset_bottom = 199.0
+scale = Vector2(0.249708, 0.286062)
+text = "vAlfa-0.0.1"
+label_settings = SubResource("LabelSettings_un6q2")
 
 [connection signal="mouse_entered" from="CanvasLayer/Control/VBoxContainer/start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Control/VBoxContainer/start" to="." method="_on_start_mouse_exited"]
